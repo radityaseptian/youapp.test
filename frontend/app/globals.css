@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  scrollbar-width: thin;
+}
+
+.bg-gradient {
+  background: radial-gradient(
+    121.73% 121.49% at 100% -3.39%,
+    #1f4247 0%,
+    #0d1d23 56.18%,
+    #09141a 100%
+  );
+}
+
+.bg-darken-custom {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.76) 0%,
+    rgba(0, 0, 0, 0) 45.83%,
+    #000000 100%
+  );
+}
+
+.no-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.text-gradient-custom {
+  background: linear-gradient(
+    74.08deg,
+    #94783e -6.8%,
+    #f3eda6 16.76%,
+    #f8fae5 30.5%,
+    #ffe2be 49.6%,
+    #d5be88 78.56%,
+    #f8fae5 89.01%,
+    #d5be88 100.43%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.save-button {
+  background: linear-gradient(134.86deg, #abfffd 2.64%, #4599db 102.4%, #aadaff 102.4%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+input {
+  @apply focus:outline-none;
+}
