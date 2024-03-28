@@ -37,7 +37,7 @@ export default function Register() {
     registerStore.confirmPassword,
   ])
 
-  const submit = async (e) => {
+  const submit: React.FormEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault()
     if (registerStore.loading) return
     try {
@@ -60,7 +60,7 @@ export default function Register() {
       } else if (data.message.length) {
         alert(data.message.join('\n'))
       }
-    } catch (error) {
+    } catch (error: any) {
       alert(error.message)
     } finally {
       registerStore.setLoading(false)

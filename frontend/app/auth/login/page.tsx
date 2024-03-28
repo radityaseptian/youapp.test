@@ -25,7 +25,7 @@ export default function Login() {
     }
   }, [loginStore.email, loginStore.password])
 
-  const submit = async (e) => {
+  const submit: React.FormEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault()
     if (loginStore.loading) return
     loginStore.setLoading(true)
@@ -43,7 +43,7 @@ export default function Login() {
       } else if (data.message) {
         alert(data.message)
       }
-    } catch (error) {
+    } catch (error: any) {
       alert(error.message)
     } finally {
       loginStore.setLoading(false)

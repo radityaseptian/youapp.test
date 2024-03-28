@@ -60,8 +60,8 @@ export default function About() {
       }
 
       userStore.saveUser({ openAboutUpdate: false })
-    } catch (error) {
-      alert(error.message)
+    } catch (error: any) {
+      alert(error.message!)
     } finally {
       userStore.setLoading(false)
     }
@@ -100,7 +100,7 @@ export default function About() {
             <label className='cursor-pointer flex items-center gap-4 mt-2 mb-5'>
               <div className='grid place-content-center w-14 h-14 rounded-2xl bg-white/[.08]'>
                 <input
-                  onChange={(e) =>
+                  onChange={(e: any) =>
                     userStore.saveUser({
                       copyBasic: { ...userStore.copyBasic, image: e.target.files[0] },
                     })
