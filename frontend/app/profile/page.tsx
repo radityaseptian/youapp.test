@@ -42,7 +42,7 @@ export default function EditUser() {
   }, [])
 
   return (
-    <main className='bg-[#09141A] min-h-screen text-white pt-[81px]'>
+    <main className='bg-[#09141A] min-h-screen text-white pt-16'>
       <div className='relative px-[18px]'>
         <div className='absolute'>
           <Back onClick={() => {}} />

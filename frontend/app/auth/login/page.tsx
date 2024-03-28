@@ -18,7 +18,7 @@ export default function Login() {
   const router = useRouter()
 
   useEffect(() => {
-    if (loginStore.email.length >= 6 && loginStore.password.length >= 6) {
+    if (loginStore.email.length >= 6 && loginStore.password.length >= 8) {
       setFilled(true)
     } else {
       setFilled(false)

@@ -36,7 +36,7 @@ export default function Interest() {
         )}
         {userStore.openInterestUpdate && (
           <main className='bg-gradient fixed inset-0 h-screen overflow-hidden text-white'>
-            <div className='fixed flex items-center justify-between top-[75px] left-[18px] right-[18px]'>
+            <div className='fixed flex items-center justify-between top-16 left-[18px] right-[18px]'>
               <Back onClick={userStore.cancelInterest} />
               <button
                 onClick={userStore.saveInterest}
@@ -46,7 +46,7 @@ export default function Interest() {
               </button>
             </div>
             <div className='h-screen overflow-auto no-scroll'>
-              <div className='h-40' />
+              <div className='h-36' />
               <div className='h-screen px-[23px]'>
                 <div className='text-gradient-custom text-sm'>Tell everyone about yourself</div>
                 <h4 className='text-xl font-semibold pt-3 pb-8'>What interest you?</h4>
