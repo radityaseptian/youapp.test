@@ -46,11 +46,11 @@ export default function Register() {
       const { email, username, password } = registerStore
       const payload = { email, username, password }
 
-      const { data, status } = await axios.post(baseUrl + '/register', payload)
+      const { data } = await axios.post(baseUrl + '/register', payload)
 
-      if (status === 201) {
-        const { data, status } = await axios.post(baseUrl + '/login', payload)
-        if (status === 201 && data.message !== 'User not found') {
+      if (data.message === 'User has been created successfully') {
+        const { data } = await axios.post(baseUrl + '/login', payload)
+        if (data.access_token) {
           userStore.saveUser({ isLogin: true, token: data.access_token })
           router.push('/profile')
           registerStore.clear()

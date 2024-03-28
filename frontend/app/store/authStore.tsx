@@ -62,7 +62,7 @@ const useRegisterStore = create<RegisterState>((set) => ({
 
   typeConfirmInputPassword: false,
   setConfirmTypeInputPassword: () =>
-    set((state) => ({ typeInputPassword: !state.typeConfirmInputPassword })),
+    set((state) => ({ typeConfirmInputPassword: !state.typeConfirmInputPassword })),
 
   loading: false,
   setLoading: (loading: boolean) => set({ loading }),

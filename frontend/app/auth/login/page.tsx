@@ -30,12 +30,12 @@ export default function Login() {
     if (loginStore.loading) return
     loginStore.setLoading(true)
     try {
-      const { data, status } = await axios.post(baseUrl + '/login', {
+      const { data } = await axios.post(baseUrl + '/login', {
         email: loginStore.email,
         username: loginStore.email,
         password: loginStore.password,
       })
-      if (status === 201 && data.message !== 'User not found') {
+      if (data.access_token) {
         userStore.saveUser({ isLogin: true, token: data.access_token })
 
         loginStore.clear()
