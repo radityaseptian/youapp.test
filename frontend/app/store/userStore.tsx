@@ -33,8 +33,6 @@ type User = BasicUser & {
   openInterestUpdate: boolean
 
   saveUser: (payload: Partial<Pick<User, keyof User>>) => void
-
-  updateUser: () => Promise<any>
 }
 
 const useUserStore = create<User>((set) => ({
@@ -96,11 +94,6 @@ const useUserStore = create<User>((set) => ({
     }
 
     set(payload)
-  },
-
-  updateUser: async () => {
-    const data = useUserStore()
-    const res = await axios.put('/', data.interests)
   },
 }))
 
