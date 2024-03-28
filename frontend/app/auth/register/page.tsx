@@ -57,8 +57,8 @@ export default function Register() {
         } else if (data.message) {
           alert(data.message)
         }
-      } else if (data.message.length) {
-        alert(data.message.join('\n'))
+      } else if (data.message) {
+        alert(typeof data.message === 'string' ? data.message : data.message.join('\n'))
       }
     } catch (error: any) {
       alert(error.message)
